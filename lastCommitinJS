@@ -1,0 +1,48 @@
+
+pic.addEventListener("click", function(event) {
+    let clickedElement = event.target; // Получаем элемент, на котором произошел клик
+
+    let elementId = clickedElement.id; // Получаем id
+   
+
+let fullPic = document.getElementById;
+const pic = document.getElementById(elementId);
+const list = document.getElementById("mainExe");
+const header = document.getElementById("PC")
+const body = document.body;
+
+
+if(pic == document.getElementById('T26')){
+    fullPic = document.getElementById('T26two')
+}
+if(pic == document.getElementById('KV1')){
+    fullPic = document.getElementById('KV1two')
+}
+
+// pic.addEventListener("click", (event) => {
+    
+    
+    
+    
+    fullPic.style.display = "block";
+    list.style.display = "none";
+    header.style.display = "none";
+    body.style.backgroundImage = 'url("Рисунок8.jpg?v=1")';
+    body.style.backgroundSize = 'cover'; 
+    body.style.backgroundPosition = 'center';
+   
+
+// });
+
+// Закрытие меню при клике вне его
+document.addEventListener("click", (event) => {
+    if (!fullPic.contains(event.target) && !pic.contains(event.target) || fullPic.contains(event.target) && !pic.contains(event.target)) {
+        fullPic.style.display = "none";
+        list.style.display = "block";
+        header.style.display = "block";
+        body.style.backgroundImage = 'url("Рисунок7.jpg?v=1")';  
+        
+    }
+});
+
+});
