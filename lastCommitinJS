@@ -1,30 +1,44 @@
 
-pic.addEventListener("click", function(event) {
-    let clickedElement = event.target; // Получаем элемент, на котором произошел клик
+document.getElementById("menu-toggle").addEventListener("click", function(){
+    let menu = document.getElementById("dropdown-content");
+    if(menu.classList.contains("active1")){
+        menu.classList.remove("active1");
+        menu.classList.add("hidden1");
 
-    let elementId = clickedElement.id; // Получаем id
-   
+        setTimeout(() => {
+            menu.style.display = "none";
+        }, 1000);
 
-let fullPic = document.getElementById;
-const pic = document.getElementById(elementId);
+    }else{
+        menu.style.display = "block";
+        menu.classList.remove("hidden1");
+        menu.classList.add("active1");
+
+    }
+
+
+
+});
+
+
+
+
+
+
+const T26full = document.getElementById("T26two");
+const T26 = document.getElementById("T26");
 const list = document.getElementById("mainExe");
 const header = document.getElementById("PC")
 const body = document.body;
+const mediaQuery = window.matchMedia('(min-width: 500px)');
 
-
-if(pic == document.getElementById('T26')){
-    fullPic = document.getElementById('T26two')
-}
-if(pic == document.getElementById('KV1')){
-    fullPic = document.getElementById('KV1two')
-}
-
-// pic.addEventListener("click", (event) => {
+function handleMediaChange(e) {
+    if (e.matches) {
+      
     
-    
-    
-    
-    fullPic.style.display = "block";
+T26.addEventListener("click", (event) => {
+    event.stopPropagation(); // Останавливаем всплытие, чтобы не закрывать тут же
+    T26full.style.display = "block";
     list.style.display = "none";
     header.style.display = "none";
     body.style.backgroundImage = 'url("Рисунок8.jpg?v=1")';
@@ -32,12 +46,12 @@ if(pic == document.getElementById('KV1')){
     body.style.backgroundPosition = 'center';
    
 
-// });
+});
 
 // Закрытие меню при клике вне его
 document.addEventListener("click", (event) => {
-    if (!fullPic.contains(event.target) && !pic.contains(event.target) || fullPic.contains(event.target) && !pic.contains(event.target)) {
-        fullPic.style.display = "none";
+    if (!T26full.contains(event.target) && !T26.contains(event.target) || T26full.contains(event.target) && !T26.contains(event.target)) {
+        T26full.style.display = "none";
         list.style.display = "block";
         header.style.display = "block";
         body.style.backgroundImage = 'url("Рисунок7.jpg?v=1")';  
@@ -45,4 +59,386 @@ document.addEventListener("click", (event) => {
     }
 });
 
+
+
+
+
+const KV1full = document.getElementById("KV1two");
+const KV1 = document.getElementById("KV1");
+
+
+
+
+KV1.addEventListener("click", (event) => {
+    event.stopPropagation(); // Останавливаем всплытие, чтобы не закрывать тут же
+    KV1full.style.display = "block";
+    list.style.display = "none";
+    header.style.display = "none";
+    body.style.backgroundImage = 'url("Рисунок8.jpg?v=1")';
+    body.style.backgroundSize = 'cover'; 
+    body.style.backgroundPosition = 'center';
+   
+
 });
+
+// Закрытие меню при клике вне его
+document.addEventListener("click", (event) => {
+    if (!KV1full.contains(event.target) && !KV1.contains(event.target) || KV1full.contains(event.target) && !KV1.contains(event.target)) {
+        KV1full.style.display = "none";
+        list.style.display = "block";
+        header.style.display = "block";
+        body.style.backgroundImage = 'url("Рисунок7.jpg?v=1")';  
+        
+    }
+});
+
+
+
+const BT7full = document.getElementById("BT7two");
+const BT7 = document.getElementById("BT7");
+
+
+
+
+BT7.addEventListener("click", (event) => {
+    event.stopPropagation(); // Останавливаем всплытие, чтобы не закрывать тут же
+    BT7full.style.display = "block";
+    list.style.display = "none";
+    header.style.display = "none";
+    body.style.backgroundImage = 'url("Рисунок8.jpg?v=1")';
+    body.style.backgroundSize = 'cover'; 
+    body.style.backgroundPosition = 'center';
+   
+
+});
+
+// Закрытие меню при клике вне его
+document.addEventListener("click", (event) => {
+    if (!BT7full.contains(event.target) && !BT7.contains(event.target) || BT7full.contains(event.target) && !BT7.contains(event.target)) {
+        BT7full.style.display = "none";
+        list.style.display = "block";
+        header.style.display = "block";
+        body.style.backgroundImage = 'url("Рисунок7.jpg?v=1")';  
+        
+    }
+});
+
+
+const T34full = document.getElementById("T34two");
+const T34 = document.getElementById("T34");
+
+
+
+
+T34.addEventListener("click", (event) => {
+    event.stopPropagation(); // Останавливаем всплытие, чтобы не закрывать тут же
+    T34full.style.display = "block";
+    list.style.display = "none";
+    header.style.display = "none";
+    body.style.backgroundImage = 'url("Рисунок8.jpg?v=1")';
+    body.style.backgroundSize = 'cover'; 
+    body.style.backgroundPosition = 'center';
+   
+
+});
+
+// Закрытие меню при клике вне его
+document.addEventListener("click", (event) => {
+    if (!T34full.contains(event.target) && !T34.contains(event.target) || T34full.contains(event.target) && !T34.contains(event.target)) {
+        T34full.style.display = "none";
+        list.style.display = "block";
+        header.style.display = "block";
+        body.style.backgroundImage = 'url("Рисунок7.jpg?v=1")';  
+        
+    }
+});
+
+
+
+const BM13full = document.getElementById("BM13two");
+const BM13 = document.getElementById("BM13");
+
+
+
+
+BM13.addEventListener("click", (event) => {
+    event.stopPropagation(); // Останавливаем всплытие, чтобы не закрывать тут же
+    BM13full.style.display = "block";
+    list.style.display = "none";
+    header.style.display = "none";
+    body.style.backgroundImage = 'url("Рисунок8.jpg?v=1")';
+    body.style.backgroundSize = 'cover'; 
+    body.style.backgroundPosition = 'center';
+   
+
+});
+
+// Закрытие меню при клике вне его
+document.addEventListener("click", (event) => {
+    if (!BM13full.contains(event.target) && !BM13.contains(event.target) || BM13full.contains(event.target) && !BM13.contains(event.target)) {
+        BM13full.style.display = "none";
+        list.style.display = "block";
+        header.style.display = "block";
+        body.style.backgroundImage = 'url("Рисунок7.jpg?v=1")';  
+        
+    }
+});
+
+
+
+const IL2full = document.getElementById("IL2twoTwo");
+const IL2 = document.getElementById("IL2");
+
+
+
+
+IL2.addEventListener("click", (event) => {
+    event.stopPropagation(); // Останавливаем всплытие, чтобы не закрывать тут же
+    IL2full.style.display = "block";
+    list.style.display = "none";
+    header.style.display = "none";
+    body.style.backgroundImage = 'url("Рисунок8.jpg?v=1")';
+    body.style.backgroundSize = 'cover'; 
+    body.style.backgroundPosition = 'center';
+   
+
+});
+
+// Закрытие меню при клике вне его
+document.addEventListener("click", (event) => {
+    if (!IL2full.contains(event.target) && !IL2.contains(event.target) || IL2full.contains(event.target) && !IL2.contains(event.target)) {
+        IL2full.style.display = "none";
+        list.style.display = "block";
+        header.style.display = "block";
+        body.style.backgroundImage = 'url("Рисунок7.jpg?v=1")';  
+        
+    }
+});
+
+
+const MIG3full = document.getElementById("MIG3two");
+const MIG3 = document.getElementById("MIG3");
+
+
+
+
+MIG3.addEventListener("click", (event) => {
+    event.stopPropagation(); // Останавливаем всплытие, чтобы не закрывать тут же
+    MIG3full.style.display = "block";
+    list.style.display = "none";
+    header.style.display = "none";
+    body.style.backgroundImage = 'url("Рисунок8.jpg?v=1")';
+    body.style.backgroundSize = 'cover'; 
+    body.style.backgroundPosition = 'center';
+   
+
+});
+
+// Закрытие меню при клике вне его
+document.addEventListener("click", (event) => {
+    if (!MIG3full.contains(event.target) && !MIG3.contains(event.target) || MIG3full.contains(event.target) && !MIG3.contains(event.target)) {
+        MIG3full.style.display = "none";
+        list.style.display = "block";
+        header.style.display = "block";
+        body.style.backgroundImage = 'url("Рисунок7.jpg?v=1")';  
+        
+    }
+});
+
+
+
+const TB3full = document.getElementById("TB3two");
+const TB3 = document.getElementById("TB3");
+
+
+
+
+TB3.addEventListener("click", (event) => {
+    event.stopPropagation(); // Останавливаем всплытие, чтобы не закрывать тут же
+    TB3full.style.display = "block";
+    list.style.display = "none";
+    header.style.display = "none";
+    body.style.backgroundImage = 'url("Рисунок8.jpg?v=1")';
+    body.style.backgroundSize = 'cover'; 
+    body.style.backgroundPosition = 'center';
+   
+
+});
+
+// Закрытие меню при клике вне его
+document.addEventListener("click", (event) => {
+    if (!TB3full.contains(event.target) && !TB3.contains(event.target) || TB3full.contains(event.target) && !TB3.contains(event.target)) {
+        TB3full.style.display = "none";
+        list.style.display = "block";
+        header.style.display = "block";
+        body.style.backgroundImage = 'url("Рисунок7.jpg?v=1")';  
+        
+    }
+});
+
+
+
+
+
+const ANT40full = document.getElementById("ANT40two");
+const ANT40 = document.getElementById("ANT40");
+
+
+
+
+ANT40.addEventListener("click", (event) => {
+    event.stopPropagation(); // Останавливаем всплытие, чтобы не закрывать тут же
+    ANT40full.style.display = "block";
+    list.style.display = "none";
+    header.style.display = "none";
+    body.style.backgroundImage = 'url("Рисунок8.jpg?v=1")';
+    body.style.backgroundSize = 'cover'; 
+    body.style.backgroundPosition = 'center';
+   
+
+});
+
+// Закрытие меню при клике вне его
+document.addEventListener("click", (event) => {
+    if (!ANT40full.contains(event.target) && !ANT40.contains(event.target) || ANT40full.contains(event.target) && !ANT40.contains(event.target)) {
+        ANT40full.style.display = "none";
+        list.style.display = "block";
+        header.style.display = "block";
+        body.style.backgroundImage = 'url("Рисунок7.jpg?v=1")';  
+        
+    }
+});
+
+
+
+
+
+
+const VinMosfull = document.getElementById("VinMostwo");
+const VinMos = document.getElementById("VinMos");
+
+
+
+
+VinMos.addEventListener("click", (event) => {
+    event.stopPropagation(); // Останавливаем всплытие, чтобы не закрывать тут же
+    VinMosfull.style.display = "block";
+    list.style.display = "none";
+    header.style.display = "none";
+    body.style.backgroundImage = 'url("Рисунок8.jpg?v=1")';
+    body.style.backgroundSize = 'cover'; 
+    body.style.backgroundPosition = 'center';
+   
+
+});
+
+// Закрытие меню при клике вне его
+document.addEventListener("click", (event) => {
+    if (!VinMosfull.contains(event.target) && !VinMos.contains(event.target) || VinMosfull.contains(event.target) && !VinMos.contains(event.target)) {
+        VinMosfull.style.display = "none";
+        list.style.display = "block";
+        header.style.display = "block";
+        body.style.backgroundImage = 'url("Рисунок7.jpg?v=1")';  
+        
+    }
+});
+
+
+const PPSH41full = document.getElementById("PPSH41two");
+const PPSH41 = document.getElementById("PPSH41");
+
+
+
+
+PPSH41.addEventListener("click", (event) => {
+    event.stopPropagation(); // Останавливаем всплытие, чтобы не закрывать тут же
+    PPSH41full.style.display = "block";
+    list.style.display = "none";
+    header.style.display = "none";
+    body.style.backgroundImage = 'url("Рисунок8.jpg?v=1")';
+    body.style.backgroundSize = 'cover'; 
+    body.style.backgroundPosition = 'center';
+   
+
+});
+
+// Закрытие меню при клике вне его
+document.addEventListener("click", (event) => {
+    if (!PPSH41full.contains(event.target) && !PPSH41.contains(event.target) || PPSH41full.contains(event.target) && !PPSH41.contains(event.target)) {
+        PPSH41full.style.display = "none";
+        list.style.display = "block";
+        header.style.display = "block";
+        body.style.backgroundImage = 'url("Рисунок7.jpg?v=1")';  
+        
+    }
+});
+
+
+const DP27full = document.getElementById("DP27two");
+const DP27 = document.getElementById("DP27");
+
+
+
+
+DP27.addEventListener("click", (event) => {
+    event.stopPropagation(); // Останавливаем всплытие, чтобы не закрывать тут же
+    DP27full.style.display = "block";
+    list.style.display = "none";
+    header.style.display = "none";
+    body.style.backgroundImage = 'url("Рисунок8.jpg?v=1")';
+    body.style.backgroundSize = 'cover'; 
+    body.style.backgroundPosition = 'center';
+   
+
+});
+
+// Закрытие меню при клике вне его
+document.addEventListener("click", (event) => {
+    if (!DP27full.contains(event.target) && !DP27.contains(event.target) || DP27full.contains(event.target) && !DP27.contains(event.target)) {
+        DP27full.style.display = "none";
+        list.style.display = "block";
+        header.style.display = "block";
+        body.style.backgroundImage = 'url("Рисунок7.jpg?v=1")';  
+        
+    }
+});
+
+
+
+const maximfull = document.getElementById("Maximatwo");
+const maxim = document.getElementById("maxim");
+
+
+
+
+maxim.addEventListener("click", (event) => {
+    event.stopPropagation(); // Останавливаем всплытие, чтобы не закрывать тут же
+    maximfull.style.display = "block";
+    list.style.display = "none";
+    header.style.display = "none";
+    body.style.backgroundImage = 'url("Рисунок8.jpg?v=1")';
+    body.style.backgroundSize = 'cover'; 
+    body.style.backgroundPosition = 'center';
+   
+
+});
+
+// Закрытие меню при клике вне его
+document.addEventListener("click", (event) => {
+    if (!maximfull.contains(event.target) && !maxim.contains(event.target) || maximfull.contains(event.target) && !maxim.contains(event.target)) {
+        maximfull.style.display = "none";
+        list.style.display = "block";
+        header.style.display = "block";
+        body.style.backgroundImage = 'url("Рисунок7.jpg?v=1")';  
+        
+    }
+});
+}
+};
+
+
+handleMediaChange(mediaQuery);
+
+// Добавление слушателя изменений
+mediaQuery.addEventListener('change', handleMediaChange);
+
